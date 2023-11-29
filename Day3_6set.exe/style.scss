@@ -1,0 +1,147 @@
+// _variables.scss
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$button-color-1: #e74c3c;
+$button-color-2: #f39c12;
+$button-color-3: #2c3e50;
+
+// _mixins.scss
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// _animations.scss
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// _header.scss
+header {
+  width: 100%;
+  background-color: $primary-color;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+
+  h1 {
+    margin: 0;
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        margin-right: 20px;
+
+        a {
+          text-decoration: none;
+          color: #fff;
+          font-weight: bold;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+// _hero-section.scss
+.hero-section {
+  width: 100%;
+  background-image: url("//assets/img/mobile-phone-1917737_1280.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+  animation: fadeIn 1s ease;
+
+  h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+
+  .description {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+  }
+
+  .buttons-container {
+    @include flex-center;
+
+    button {
+      margin-right: 20px;
+      padding: 10px 20px;
+      font-size: 1em;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:nth-child(1) {
+        background-color: $button-color-1;
+      }
+
+      &:nth-child(2) {
+        background-color: $button-color-2;
+      }
+
+      &:nth-child(3) {
+        background-color: $button-color-3;
+      }
+
+      &:hover {
+        background-color: darken($button-color-1, 10%);
+      }
+    }
+  }
+
+  .image-container {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+// _grid.scss
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  .grid-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+
+    &:nth-child(odd) {
+      background-color: $secondary-color;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}

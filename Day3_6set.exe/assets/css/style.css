@@ -1,0 +1,108 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+header {
+  width: 100%;
+  background-color: #3498db;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+header p {
+  font-size: 1.2em;
+}
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+header nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+header nav ul li a:hover {
+  color: #2ecc71;
+}
+
+.hero-section {
+  width: 100%;
+  background-image: url("//assets/img/mobile-phone-1917737_1280.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+  animation: fadeIn 1s ease;
+}
+.hero-section h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+.hero-section .description {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+.hero-section .buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-section .buttons-container button {
+  margin-right: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.hero-section .buttons-container button:nth-child(1) {
+  background-color: #e74c3c;
+}
+.hero-section .buttons-container button:nth-child(2) {
+  background-color: #f39c12;
+}
+.hero-section .buttons-container button:nth-child(3) {
+  background-color: #2c3e50;
+}
+.hero-section .buttons-container button:hover {
+  background-color: #d62c1a;
+}
+.hero-section .image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.grid-container .grid-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+.grid-container .grid-item:nth-child(odd) {
+  background-color: #2ecc71;
+}
+.grid-container .grid-item img {
+  max-width: 100%;
+  height: auto;
+}/*# sourceMappingURL=style.css.map */
